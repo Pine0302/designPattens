@@ -1,9 +1,12 @@
 package observer;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class Order implements Subjetc {
+
+public class Order implements Subject {
 
     private OrderState state;
     private String orderno;
@@ -16,13 +19,20 @@ public class Order implements Subjetc {
         this.customer = customer;
     }
 
+    public String getOrderno(){
+        return this.orderno;
+    }
+
     public void setOrderState(OrderState state) {
         this.state = state;
     }
 
     public void setOrderPaid() {
         this.setOrderState(OrderState.PAID);
-        this.observerList.forEach(o -> o.update());
+        Map map = new HashMap();
+        map.put("orderno",this.orderno);
+        map.put("state",this.state);
+        this.notifyChanged(new Event(map));
         //发布事件
         //给用户发信息
        /* Message messageBuyer = new Message(this.customer,"order paid");
@@ -45,8 +55,8 @@ public class Order implements Subjetc {
     }
 
     @Override
-    public void notifyChanged() {
-       // this.observerList.forEach(o -> o.update());
+    public void notifyChanged(Event event) {
+        this.observerList.forEach(o -> o.update(event));
         /*for (Observer observer : observerList) {
             observer.update();
         }*/

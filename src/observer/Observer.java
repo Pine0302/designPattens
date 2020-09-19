@@ -4,5 +4,5 @@ public interface Observer {
     /**
      * 接收变动通知
      */
-    void update();
+    void update(Event event);
 }

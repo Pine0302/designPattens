@@ -37,7 +37,7 @@ public class Customer implements Observer {
         this.upperCustomer = upperCustomer;
     }
 
-    public void upgradeLevel() {
+    public void upgradeLevel(Event event) {
         if (checkLevelUpgradeValid()) {
             this.level = this.level + 1;
         }
@@ -50,7 +50,7 @@ public class Customer implements Observer {
 
 
     @Override
-    public void update() {
-        this.upgradeLevel();
+    public void update(Event event) {
+        this.upgradeLevel(event);
     }
 }

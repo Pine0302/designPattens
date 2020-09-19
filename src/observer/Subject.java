@@ -1,6 +1,6 @@
 package observer;
 
-public interface Subjetc {
+public interface Subject {
     /**
      * 订阅操作
      */
@@ -14,5 +14,5 @@ public interface Subjetc {
     /**
      * 通知变动
      */
-    void notifyChanged();
+    void notifyChanged(Event event);
 }

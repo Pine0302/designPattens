@@ -12,13 +12,15 @@ public class Message implements Observer {
 
     /**
      * 给用户发送信息
+     *
+     * @param event
      */
-    public void sendMessage() {
-        System.out.println("send message ：'" + this.content + "' to customer： " + this.customer.getOpenid());
+    public void sendMessage(Event event) {
+        System.out.println("send message ：'" + this.content + "' to customer： " + this.customer.getOpenid() + " orderno: " + event.getMap().get("orderno") + " order state : " + event.getMap().get("state"));
     }
 
     @Override
-    public void update() {
-        this.sendMessage();
+    public void update(Event event) {
+        this.sendMessage(event);
     }
 }
