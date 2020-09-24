@@ -1,14 +1,12 @@
 package observer;
 
-public class Customer implements Observer {
+public class Customer extends Member implements Observer  {
     private int level;
 
-    private String openid;
-
     private Customer upperCustomer;
-
+    
     Customer(String openid, int level) {
-        this.openid = openid;
+        super.setOpenid(openid);
         this.level = level;
     }
 
@@ -17,9 +15,7 @@ public class Customer implements Observer {
         this.upperCustomer = upperCustomer;
     }
 
-    public String getOpenid() {
-        return this.openid;
-    }
+
 
     public int getLevel() {
         return this.level;

@@ -1,23 +1,17 @@
 package observer;
 
-public class Merchant {
-
-    private String merchOpenidId;
+public class Merchant extends Member implements Observer {
 
     private String merchName;
 
     Merchant(String merchName, String merchOpenidId) {
+        super.setOpenid(merchOpenidId);
         this.merchName = merchName;
-        this.merchOpenidId = merchOpenidId;
+      
     }
 
-    public String getMerchOpenid() {
-        return this.merchOpenidId;
-    }
-
-    public void setMerchOpenid(String merchOpenidId) {
-        this.merchOpenidId = merchOpenidId;
-    }
+  @Override
+    public void update(Event event) {}
 
 
 }

@@ -11,12 +11,14 @@ public class Order implements Subject {
     private OrderState state;
     private String orderno;
     private Customer customer;
+    private Merchant merchant;
     private List<Observer> observerList = new ArrayList<>();
 
-    Order(String orderno, OrderState initState, Customer customer) {
+    Order(String orderno, OrderState initState, Customer customer,Merchant merchant) {
         this.orderno = orderno;
         this.state = initState;
         this.customer = customer;
+        this.merchant = merchant;
     }
 
     public String getOrderno(){
