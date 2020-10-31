@@ -5,7 +5,7 @@ package factory;
  */
 public  class GlobalCommissionFactory implements CommissionFactory{
     @Override
-    public Commission getCommissionInstance(){
+    public Commission createCommissionInstance(){
         return new GlobalCommission();
     }
 }

@@ -2,7 +2,7 @@ package factory;
 
 public  class AreaCommissionFactory implements CommissionFactory {
     @Override
-    public Commission getCommissionInstance(){
+    public Commission createCommissionInstance(){
         return new AreaCommission();
     }
 }
