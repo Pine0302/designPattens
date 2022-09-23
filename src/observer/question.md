@@ -4,7 +4,7 @@
 + observer ： message 、customer
 
 <div align="center">
-<img src="../images/observer.png" height="500" width="800" >
+<img src="https://pine-static.oss-cn-hangzhou.aliyuncs.com/uPic/observer.png" height="500" width="800" >
 </div>
 
 + 可以独立的改变目标与观察者，使二者关系达到松耦合

@@ -5,7 +5,10 @@ package factory;
  * 用户类
  */
 public class Customer  {
+    //用户等级
     private int level;
+
+    //用户的专属id
     private String openid;
 
     public String getOpenid() {

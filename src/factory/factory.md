@@ -17,7 +17,7 @@ Factory Method模式通过面向对象的手法，将所要创建的具体对象
 Factory Method模式解决“单个对象”的需求变化。缺点在于要求创建方法/参数相同。
 
 <div align="center">
-<img src="../images/factory-method.png" height="500" width="800" >
+<img src="https://pine-static.oss-cn-hangzhou.aliyuncs.com/uPic/factory-method.png" height="500" width="800" >
 </div>
 
 Product：一个抽象类，属于框架的一部分。里面定义了在Factory Method模式下生成的实现所拥有的接口（API）；-->Commission

@@ -2,6 +2,6 @@
 /out
 *.iml
 out
-/out/
+/out/*
 *.class
 out

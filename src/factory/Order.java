@@ -5,8 +5,11 @@ package factory;
  */
 public class Order {
 
+    //订单状态
     private OrderState state;
+    //订单号
     private String orderno;
+    //购买客户
     private Customer customer;
 
     public double getPrice() {
